@@ -11,19 +11,17 @@ const msjBienvenida = () => {
     }
 };
 
-const selectProducts = () => {
-    const productos = [
-        { id: 1, nombre: "Conjunto Roma", precio: 25300 },
-        { id: 2, nombre: "Sastrero Mia", precio: 11400 },
-        { id: 3, nombre: "Sweater Victoria", precio: 5600 }
-    ];
+const productos = [
+{ id: 1, nombre: "Conjunto Roma", precio: 25300 },
+{ id: 2, nombre: "Sastrero Mia", precio: 11400 },
+{ id: 3, nombre: "Sweater Victoria", precio: 5600 }
+];
 
-    const accesorios = [
-        { id: 1, nombre: "Anillo cobra", precio: 5300 },
-        { id: 2, nombre: "Aros Renata", precio: 4400 },
-        { id: 3, nombre: "Collar estrellas", precio: 3600 }
-    ];
-}
+const accesorios = [
+{ id: 1, nombre: "Anillo cobra", precio: 5300 },
+{ id: 2, nombre: "Aros Renata", precio: 4400 },
+{ id: 3, nombre: "Collar estrellas", precio: 3600 }
+];
 
 // Función para mostrar opciones
 const selectOption = () => {
@@ -45,8 +43,8 @@ const selectOption = () => {
 const mostrarOpciones = (lista) => {
     let mensaje = "Elige una opción:\n";
 
-    for (let i = 0; i < lista.length; i++) {
-        mensaje += `${i + 1} - ${lista[i].nombre}\n`;
+    for (let posicion = 0; posicion < lista.length; posicion++) {
+        mensaje += `${posicion + 1} - ${lista[posicion].nombre}\n`;
     }
 
     const eleccion = Number(prompt(mensaje)) - 1;
@@ -59,14 +57,6 @@ const mostrarOpciones = (lista) => {
     }
 };
 
-// Ejecutar la función de selección al cargar la página
-selectOption();
-
-
-
-
-
 // Llamar a las funciones de bienvenida y selección de opciones
     msjBienvenida();
     selectOption();
-    selectProducts ();
